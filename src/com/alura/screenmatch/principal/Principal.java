@@ -1,3 +1,5 @@
+package com.alura.screenmatch.principal;
+
 import com.alura.screenmatch.calculos.CalculadoraDeTiempo;
 import com.alura.screenmatch.calculos.FiltroRecomendacion;
 import com.alura.screenmatch.modelos.Episodio;
@@ -8,7 +10,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
+        Pelicula miPelicula = new Pelicula("Encanto", 2021);
         miPelicula.setNombre("Encanto");
         miPelicula.setFechaDeLanzamiento(2021);
         miPelicula.setDuracionEnMinutos(180);
@@ -22,7 +24,7 @@ public class Principal {
         System.out.println(miPelicula.calculaMediaEvaluaciones());
 
 
-        Serie lost = new Serie();
+        Serie lost = new Serie("Lost", 2000);
         lost.setNombre("Lost");
         lost.setFechaDeLanzamiento(2000);
         lost.muestraFichaTecnica();
@@ -31,7 +33,7 @@ public class Principal {
         lost.setMinutosPorEpisodio(50);
         System.out.println("Duracion de la série: " + lost.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
+        Pelicula otraPelicula = new Pelicula("Avatar", 2023);
         otraPelicula.setNombre("Avatar");
         otraPelicula.setFechaDeLanzamiento(2023);
         otraPelicula.setDuracionEnMinutos(200);
@@ -51,7 +53,7 @@ public class Principal {
         episodio.setTotalVisualizaciones(300);
         filtro.filtra(episodio);
 
-        var peliculaDeBruno = new Pelicula();
+        var peliculaDeBruno = new Pelicula("El señor de los anillos", 2001);
         peliculaDeBruno.setNombre("El señor de los anillos");
         peliculaDeBruno.setDuracionEnMinutos(180);
         peliculaDeBruno.setFechaDeLanzamiento(2001);
