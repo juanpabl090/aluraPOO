@@ -24,9 +24,6 @@ public class Pelicula extends Titulo implements Clasificable {
 
     @Override
     public String toString() {
-        return "Pelicula{ " + getNombre() +
-                " director=' " + getDirector() + '\'' +
-                " fecha de lanzamiento " + getFechaDeLanzamiento() +
-                '}';
+        return "Pelicula: " + this.getNombre() + " (" + this.getFechaDeLanzamiento() + ")";
     }
 }

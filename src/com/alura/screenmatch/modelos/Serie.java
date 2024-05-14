@@ -49,12 +49,6 @@ public class Serie extends Titulo {
 
     @Override
     public String toString() {
-        return "Serie{" +
-                "nombre= " + getNombre() +
-                " temporadas= " + getNombre() +
-                ", activa= " + isActiva() +
-                ", episodiosPorTemporada= " + getEpisodiosPorTemporada() +
-                ", minutosPorEpisodio= " + getMinutosPorEpisodio() +
-                '}';
+        return "Serie: " + this.getNombre() + " (" + this.getFechaDeLanzamiento() + ")";
     }
 }
