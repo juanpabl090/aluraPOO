@@ -4,8 +4,10 @@ import com.alura.screenmatch.modelos.Pelicula;
 import com.alura.screenmatch.modelos.Serie;
 import com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
+import java.util.LinkedList;
+import java.util.List;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -17,20 +19,20 @@ public class PrincipalConListas {
         peliculaDeBruno.evalua(9);
         Serie lost = new Serie("Lost", 2000);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(miPelicula);
         lista.add(otraPelicula);
         lista.add(lost);
         lista.add(peliculaDeBruno);
 
-        for (Titulo item : lista){
+        for (Titulo item : lista) {
             System.out.println(item);
-            if (item instanceof Pelicula pelicula){
+            if (item instanceof Pelicula pelicula) {
                 System.out.println(pelicula.getClasificacion());
             }
         }
 
-        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        List<String> listaDeArtistas = new LinkedList<>();
         listaDeArtistas.add("Penelope Cruz");
         listaDeArtistas.add("Antonio Banderas");
         listaDeArtistas.add("Ricardo Darin");
@@ -39,8 +41,9 @@ public class PrincipalConListas {
         System.out.println("lista De Artistas ordenada" + listaDeArtistas);
 
         Collections.sort(lista);
-        System.out.println("Lista"+lista);
+        System.out.println("Lista" + lista);
 
-        lista.sort();
+        lista.sort(Comparator.comparing(Titulo::getFechaDeLanzamiento));
+        System.out.println("Lista ordenada por fecha de lanzamiento: " + lista);
     }
 }
