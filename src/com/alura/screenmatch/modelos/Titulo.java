@@ -1,13 +1,10 @@
 package com.alura.screenmatch.modelos;
 
 import com.alura.screenmatch.excepcion.ErrorEnConversionDeDuracionException;
-import com.google.gson.annotations.SerializedName;
 
 public class Titulo implements Comparable<Titulo> {
 
-    @SerializedName("Title")
     private String nombre;
-    @SerializedName("Year")
     private int fechaDeLanzamiento;
     private boolean incluidoEnElPlan;
     private double sumaDeLasEvaluaciones;
@@ -88,8 +85,8 @@ public class Titulo implements Comparable<Titulo> {
 
     @Override
     public String toString() {
-        return "nombre: " + nombre +
+        return "(nombre: " + nombre +
                 ", fecha de lanzamiento: " + fechaDeLanzamiento +
-                ", Duracion: " + duracionEnMinutos;
+                ", Duracion: " + duracionEnMinutos + ")";
     }
 }
